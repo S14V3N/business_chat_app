@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business Chat</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+</head>
+<body>
+    <div class="theme-toggle">
+    <button id="theme-btn">🌙</button>
+</div>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+
+        <h2>Online Users</h2>
+
+        <ul id="users"></ul>
+
+    </aside>
+
+    <main class="chat-container">
+
+        <header>
+            <h1>Business Chat</h1>
+            <p>Real-Time Communication Platform</p>
+        </header>
+
+        <div id="chat-box"></div>
+
+        <div id="typing"></div>
+
+        <div class="input-container">
+
+            <input type="text" id="message-input" placeholder="Type a message...">
+
+            <button id="send-btn">Send</button>
+
+        </div>
+
+    </main>
+
+</div>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
